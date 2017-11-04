@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Calculadora</title>
+	<link rel="stylesheet" href="materialize-src/sass/materialize.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="base/font-awesome-4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<!-- Início cabeçalho -->
+	<header>
+		<nav class="container">
+			<div class="nav-wrapper">
+				<ul id="nav-mobile" class="left hide-on-med-and-down">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Sobre</a></li>
+					<li><a href="#">Serviços</a></li>
+					<li><a href="#">Contato</a></li>
+					<li><a href="#">Aulas</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- Fim cabeçalho -->
+
+	<!-- Inícios de todos os modais -->
+	<div class="all container">
+		<div class="row">
+			<div class="col xl12">
+				<!-- Início primeiro modal -->
+				<div class="col l3 xl3">
+					<div class="block waves-effect waves-light btn modal-trigger" data-target="modal1">
+						<h6>1 Operando</h6>
+						<p>Fatorial, Quadrado perfeito, X ao Cubo, Raiz qua...</p>
+					</div>
+					<div id="modal1" class="modal modal-fixed-footer">
+						<button class="btn modal-close"><i class="material-icons">close</i></button>
+						<div class="modal-content">
+							<div class="row">
+								<div class="col xl12">
+									<div class="col offset-s3 offset-m3 offset-l3  s6 m6 l7">
+										<form>
+											<div class="input-field col s10 m10 l10 xl10">
+												<input id="valorX" type="number" class="validate">
+												<label for="valorX">Valor de X</label>
+											</div>
+											<div class="col s6 m6 l6 xl6">
+												<p>
+													<input name="group1" type="radio" id="fat" value="fat">
+													<label for="fat">x! (Fatorial de X)</label>
+												</p>
+												<p>
+													<input name="group1" type="radio" id="xQuadrado" value="xQuadrado">
+													<label for="xQuadrado">x²</label>
+												</p>
+												<p>
+													<input name="group1" type="radio" id="xCubo" value="xCubo">
+													<label for="xCubo">x³</label>
+												</p>
+											</div>
+											<div class="col s6 m6 l6 xl6">
+												<p>
+													<input name="group1" type="radio" id="raiz" value="xRaizQuadrada">
+													<label for="raiz">Raiz quadrada</label>
+												</p>
+												<p>
+													<input name="group1" type="radio" id="seno" value="seno">
+													<label for="seno">Seno</label>
+												</p>
+												<p>
+													<input name="group1" type="radio" id="div" value="1">
+													<label for="div">1/x</label>
+												</p>
+											</div>
+											<div class="input-field col s10 m10 l10 xl10">
+												<input disabled id="resultado1" type="number" class="validate">
+												<label for="resultado1"></label>
+											</div>
+											<input class="btn btnx" type="reset" value="Limpar">
+										</form><p></p>
+										<ul class=" pull-xl1 col s12 xl12 collapsible popout" data-collapsible="accordion">
+											<li>
+												<div class="collapsible-header"><i class="large material-icons">help_outline</i>Ajuda</div>
+												<div class="collapsible-body">
+													<ul>
+														<li>1º: Insira um número no campo "Valor de x"</li>
+														<li>2º: Selecione a operação desejada.</li>
+														<li>3º: O resultado será mostrando no campo "Resultado"</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim primeiro modal -->
+
+				<!-- Início segundo modal -->
+				<div class="col l3 xl3">
+					<div class="block waves-effect waves-light btn modal-trigger" data-target="modal2">
+						<h6>2 Operando</h6>
+						<p>Adição, Subtração, Multiplicação, Divisão e Mod...</p>
+					</div>
+					<div id="modal2" class="modal modal-fixed-footer">
+						<button class="btn modal-close"><i class="material-icons">close</i></button>
+						<div class="modal-content">
+							<div class="row">
+								<div class="col offset-s2 offset-m2 offset-l2 offset-xl2 s12 m8 l8 xl8">
+									<form action="">
+										<div class="input-field col s4 xl4">
+											<input id="valorX1" type="number" class="validate">
+											<label for="valorX1">Valor 1</label>
+										</div>
+										<div class="input-field col s4 xl4">
+											<input id="valorX2" type="number" class="validate">
+											<label for="valorX2">Valor 2</label>
+										</div>
+										<div class="input-field col s4 xl4">
+											<select id="operacoes">
+												<option value="">Operação</option>
+												<option value="0">+</option>
+												<option value="1">-</option>
+												<option value="2">*</option>
+												<option value="3">/</option>
+												<option value="4">mod</option>
+											</select>
+										</div>
+
+										<div class="input-field col s12 xl12">
+											<input disabled id="resultado2" type="number" class="validate">
+											<label for="resultado2"></label>
+										</div>
+										<input class="btn col offset-s5 offset-xl5" type="reset" value="Limpar">
+									</form>
+									<ul class="col s12 offset-xl1 xl10 collapsible popout" data-collapsible="accordion">
+										<li>
+											<div class="collapsible-header"><i class="large material-icons">help_outline</i>Ajuda</div>
+											<div class="collapsible-body">
+												<ul>
+													<li>1º: Insira um número campo "Valor 1"</li>
+													<li>2º: Selecione a operação desejada.</li>
+													<li>3º: Insira um número campo "Valor 2"</li>
+													<li>4º: Clique em executar</li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim segundo modal -->
+
+				<!-- Início Terceiro modal -->
+				<div class="col l3 xl3">
+					<div class="block waves-effect waves-light btn modal-trigger" data-target="modal3">
+						<h6>Conversor</h6>
+						<p>Real para Dólar, Real para Euro, Dólar para Real e Eur...</p>
+					</div>
+					<div id="modal3" class="modal modal-fixed-footer">
+						<button class="btn modal-close"><i class="material-icons">close</i></button>
+						<div class="modal-content">
+							<div class="row">
+								<div class="">
+									<div class="col offset-m3 offset-l3 offset-xl3 s9 xl6">
+										<form>
+											<div class="input-field col s10">
+												<input id="valorX3" type="number" class="validate">
+												<label for="valorX3">Valor para conversão</label>
+											</div>
+											<h4>Cotação</h4>
+											<div class="input-field col s10 ">
+												<input id="valorX4" type="number" class="validate">
+												<label for="valorX4">US$</label>
+											</div>
+											<div class="input-field col s10 ">
+												<input id="valorX5" type="number" class="validate">
+												<label for="valorX5">Euro</label>
+											</div>
+											<div class="col s6">
+												<p>
+													<input name="group1" type="radio" id="rsForDolar" value="rsForDolar">
+													<label for="rsForDolar">R$ -> US$</label>
+												</p>
+												<p>
+													<input name="group1" type="radio" id="euro" value="rsForEuro">
+													<label for="euro">R$ -> Euro</label>
+												</p>
+											</div>
+											<div class="col s6 m6 l6 xl6">
+												<p>
+													<input name="group1" type="radio" id="us" value="dolarForRs">
+													<label for="us">US$ -> R$</label>
+												</p>
+												<p>
+													<input name="group1" type="radio" id="eus" value="euroForReal">
+													<label for="eus">Euro -> R$</label>
+												</p>
+											</div>
+											<div class="input-field col s10">
+												<input disabled id="resultado3" type="number" class="validate">
+												<label for="resultado3"></label>
+											</div>
+											<input class="btn" type="reset" value="Limpar">
+										</form>
+										<ul class="col s10 xl10 collapsible popout" data-collapsible="accordion">
+											<li>
+												<div class="collapsible-header"><i class="large material-icons">help_outline</i>Ajuda</div>
+												<div class="collapsible-body">
+													<ul>
+														<li>1º: Insira um número no campo "Valor para conversão".</li>
+														<li>2º: Insira a cotação no campo "US$".</li>
+														<li>3º: Insira a cotação no campo "euro €".</li>
+														<li>4º: Selecione a operação desejada.</li>
+														<li>5º: O resultado será mostrando no campo "Resultado"</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim terceiro modal -->
+
+				<!-- Início quarto modal -->
+				<div class="col l3 xl3">
+					<div class="block waves-effect waves-light btn modal-trigger" data-target="modal4">
+						<h6>Conversores</h6>
+						<p>Decimal para Binário, Decimal para Hexadecimal Bin...</p>
+					</div>
+					<div id="modal4" class="modal modal-fixed-footer">
+						<button class="btn modal-close"><i class="material-icons">close</i></button>
+						<div class="modal-content">
+							<div class="row">
+								<div class="">
+									<div class="col offset-s3 offset-m3 offset-l3 offset-xl3 s6 m6 l6 xl6">
+										<form action="">
+											<div class="input-field col s10 m10 l10 xl10">
+												<input id="valorConversor" type="text" class="validate">
+												<label for="valorConversor">Valor para conversão</label>
+											</div>
+											<div class="col s12 m12 l12 xl12">
+												<p>
+													<input name="group1" type="radio" id="dec" value="dec">
+													<label for="dec">Dec -> Bin</label>
+												</p>
+												<p>
+													<input name="group1" type="radio" id="hex" value="hex">
+													<label for="hex">Dec -> hex</label>
+												</p>
+												<p>
+													<input name="group1" type="radio" id="bin" value="bin">
+													<label for="bin">Bin -> Dec</label>
+												</p>
+												<p>
+													<input name="group1" type="radio" id="hexDec" value="hexDec">
+													<label for="hexDec">Hex -> Dec</label>
+												</p>
+											</div>
+											<div class="input-field col s10 m10 l10 xl10">
+												<input disabled id="resultado4" type="text" class="validate">
+												<label for="resultado4"></label>
+											</div>
+											<input class="btn" type="reset" value="Limpar">
+										</form>
+										<ul class="col pull-s1 s12 xl10 collapsible popout" data-collapsible="accordion">
+											<li>
+												<div class="collapsible-header"><i class="large material-icons">help_outline</i>Ajuda</div>
+												<div class="collapsible-body">
+													<ul>
+														<li>1º: Insira um número no campo "Valor para conversão".</li>
+														<li>2º: Selecione a opção desejada.</li>
+														<li>3º: O resultado será mostrando no campo "Resultado"</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Fim quarto modal -->
+			</div>
+		</div>
+	</div>
+	<!-- Fim de todos os modais -->
+
+	<!-- Início do rodapé page-footer-->
+	<footer class="">
+		<section class="container">
+			<div class="row alinha">
+				<!-- Início bloco de ícones -->
+				<div class="space col xl12">
+
+					<!-- Início primeiro ícone -->
+					<div class="internalSpace  teste col l6 xl4">
+						<div class="icon col xl1">
+							<i class="fa fa-github" aria-hidden="true"></i>
+						</div>
+						<div class="info">
+							<a href="https://github.com/xewertonfilipe" target="_blank">GitGub</a>
+						</div>
+					</div>
+					<!-- Fim primeiro ícone -->
+
+					<!-- Início segundo ícone -->
+					<div class="internalSpace alignMidle alignLast-s teste col l6 xl4">
+						<div class="icon col xl1">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</div>
+						<div class="info">
+							<a href="mailto:xewertonsys@gmail.com">xewertonsys@gmail.com</a>
+						</div>
+					</div>
+					<!-- Fim segundo ícone -->
+
+					<!-- Início terceiro ícone -->
+					<div class="internalSpace alignLast alignLast-l alignPhone col l6 xl4">
+						<div class="icon col xl1">
+							<i class="fa fa-mobile" aria-hidden="true"></i>
+						</div>
+						<div class="info">
+							<a href="callto:+55819970069XX">+55819970069XX</a>
+						</div>
+					</div>
+					<!-- Fim terceiro ícone -->
+
+					<!-- Início quarto ícone -->
+					<div class="internalSpace alignLast alignLast-s alignLast-l alignLast-f col l6 xl4">
+						<div class="icon col xl1">
+							<i class="fa fa-facebook-official" aria-hidden="true"></i>
+						</div>
+						<div class="info">
+							<a href="https://www.facebook.com/Xewerton" target="_blank">Facebook</a>
+						</div>
+					</div>
+					<!-- Fim quarto ícone -->
+
+					<!-- Início quinto ícone -->
+					<div class="internalSpace alignMidle alignLast-l  alignLast-not col l6 xl4">
+						<div class="icon col xl1">
+							<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+						</div>
+						<div class="info">
+							<a href="https://www.linkedin.com/in/ewerton-filipe-b68650112/" target="_blank">Linkedin</a>
+						</div>
+					</div>
+					<!-- Fim quinto ícone -->
+
+					<!-- Início sexto ícone -->
+					<div class="internalSpace alignLast alignLast-s col l6 xl4">
+						<div class="icon col xl1">
+							<i class="fa fa-phone-square" aria-hidden="true"></i>
+						</div>
+						<div class="info">
+							<a href="callto:+5581410155XX">+5581410155XX</a>
+						</div>
+					</div>
+					<!-- Fim sexto ícone -->
+
+				</div>
+				<!-- Fim bloco de ícones -->
+			</div>
+			<div class="row">
+				<div class="col l12 xl12">
+					<div class="copyright col m12 offset-xl1 xl9">
+						<p>Ewerton Filipe © 2017.  <a href="#">Privacy Policy</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</footer>
+	<!-- Fim do rodapé -->
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="materialize-src/js/bin/materialize.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

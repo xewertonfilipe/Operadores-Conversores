@@ -1,0 +1,48 @@
+/*Coneúdo do site*/
+.block {
+	width: 85%;
+	height: 210px;
+
+	h6 {
+		font-weight: bold;
+		margin-top: 100%;
+	}
+
+	p {
+		margin-top: 30px;
+		line-height: 20px;
+		text-transform: none;
+		text-align: left;
+	}
+}
+
+.btn {
+	background-color: $cor-btn;
+
+	&:hover {
+		background-color: $cor-padrao;
+	}
+}
+
+.btnx {
+	margin-left: 9px;
+}
+
+.all {
+	margin-top: 1%;
+	min-height: 100%;
+	position: relative;
+}
+
+form {
+	
+	h4 {
+		margin-left: 10px;
+	}
+
+	input {
+		margin-left: 10px;
+	}
+}
+/*Fim do conteúdo*/
+

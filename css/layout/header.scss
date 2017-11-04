@@ -1,0 +1,30 @@
+/*Início header*/
+html, body {width: 100%}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background-color: $cor-header;
+
+	nav {
+		background-color: $cor-header;
+		box-shadow: none;
+
+		ul {
+			padding-left: 10px !important;
+		}
+
+		li:first-child {
+			background-color: $cor-padrao;
+		}
+
+		li:hover {
+			background-color: $cor-padrao;
+		}
+	}
+}
+/*Fim do header*/
+

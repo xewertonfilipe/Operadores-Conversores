@@ -1,0 +1,10 @@
+// Início mixins
+@mixin tamanhoDiv($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin conteudo($margin) {
+	margin-top: $margin;
+}
+// Fim mixins
